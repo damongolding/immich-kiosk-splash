@@ -167,11 +167,23 @@ h1 {
 }
 
 .features {
-    padding: 12rem 4rem;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 50rem;
+    min-height: 100vh;
+}
+
+.features--row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.features--row:nth-child(2) {
+    margin-top: 7.59375rem;
 }
 
 .features--feature {
@@ -188,9 +200,11 @@ h1 {
 
     margin-bottom: 3rem;
 
-    width: calc(33.33% - 1.5rem);
+    width: 100%;
 
     position: relative;
+
+    overflow: hidden;
 
     z-index: 1;
 }
@@ -198,22 +212,31 @@ h1 {
 .features--feature::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0.05rem;
+    left: 0.05rem;
+    width: calc(100% - 0.1rem);
+    height: calc(100% - 0.1rem);
     background: #1f262f;
     z-index: -1;
     border-radius: 0.75rem;
 }
 
+.bg {
+    position: absolute;
+    top: -4rem;
+    right: -13rem;
+    opacity: 0.05;
+    width: 30rem;
+    height: auto;
+}
+
 .features--feature::after {
     content: "";
     position: absolute;
-    top: -0.125rem;
-    left: -0.125rem;
-    width: calc(100% + 0.25rem);
-    height: calc(100% + 0.25rem);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: conic-gradient(
         #fa2921,
         #f3516b,
@@ -253,13 +276,38 @@ h1 {
     white-space: pre;
 }
 
+.breakline {
+    display: none;
+}
+
+footer {
+    position: relative;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/img/logo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2rem);
+    opacity: 0.3;
+}
+
 /* Small */
 @media (max-width: 900px) {
     .features {
         padding: 6rem 2rem;
-    }
-    .features--feature {
-        width: calc(50% - 1.5rem);
     }
 }
 
@@ -276,13 +324,20 @@ h1 {
 
     .features {
         padding: 2rem;
+        flex-direction: column;
     }
     .features--feature {
         width: 100%;
     }
-}
 
-.features,
-footer {
-    display: none;
+    .features--row {
+        padding: 0;
+    }
+    .features--row:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .breakline {
+        display: inline;
+    }
 }

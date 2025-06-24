@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const heroDevice = document.getElementById("hero-device");
   const devices = document.querySelectorAll(".device");
 
@@ -36,4 +38,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
   tl.to(heroDevice, { opacity: 1, duration: 0.4 });
+
+  gsap.from(".features--feature", {
+    scrollTrigger: ".features--feature",
+    y: "+=100",
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.2,
+  });
 });
