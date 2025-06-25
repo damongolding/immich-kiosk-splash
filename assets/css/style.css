@@ -212,10 +212,10 @@ h1 {
 .features--feature::before {
     content: "";
     position: absolute;
-    top: 0.05rem;
-    left: 0.05rem;
-    width: calc(100% - 0.1rem);
-    height: calc(100% - 0.1rem);
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     background: #1f262f;
     z-index: -1;
     border-radius: 0.75rem;
@@ -239,13 +239,13 @@ h1 {
     height: 100%;
     background: conic-gradient(
         #fa2921,
-        #f3516b,
-        #ed79b5,
-        #857ed6,
-        #1e83f7,
-        #1ba3a0,
-        #1ab375,
         #8bbb25,
+        #1ab375,
+        #1ba3a0,
+        #1e83f7,
+        #857ed6,
+        #ed79b5,
+        #f3516b,
         #fa2921
     );
     z-index: -2;

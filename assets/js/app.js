@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const heroDevice = document.getElementById("hero-device");
@@ -19,24 +19,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   nextDevice();
 
-  let tl = gsap.timeline({
+  const tl = gsap.timeline({
     onRepeat: () => nextDevice(),
     repeat: -1,
-    repeatDelay: 3,
+    repeatDelay: 1.5,
     repeatRefresh: true,
-    delay: 1,
+    delay: 2,
   });
 
   tl.to(heroDevice, { opacity: 0, duration: 0.4 });
-  tl.to(heroDevice, {
-    width: () => {
-      return currentDeviceWidth;
+  tl.to(
+    heroDevice,
+    {
+      width: () => {
+        return currentDeviceWidth;
+      },
+      duration: 0.4,
+      ease: "sine.inOut",
+      onComplete: () => {
+        heroDevice.textContent = currentDeviceText;
+      },
     },
-    duration: 0.4,
-    onComplete: () => {
-      heroDevice.textContent = currentDeviceText;
-    },
-  });
+    "-=0.2",
+  );
   tl.to(heroDevice, { opacity: 1, duration: 0.4 });
 
   gsap.from(".features--feature", {
