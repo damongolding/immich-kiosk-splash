@@ -9,13 +9,16 @@
         />
 
         <link rel="stylesheet" href="/assets/css/style.css" />
-        <title>Immich Kiosk</title>
+        <title>
+            Immich Kiosk: create highly configurable slideshows for displaying
+            Immich assets on browsers and devices.
+        </title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta property="og:title" content="Immich Kiosk" />
         <meta property="og:locale" content="en" />
         <meta
             property="og:description"
-            content="Immich Kiosk is a lightweight slideshow for running on kiosk devices and browsers that uses Immich as a data source."
+            content="Immich Kiosk helps you create highly configurable slideshows for displaying Immich assets on browsers and devices."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:site_name" content="Immich Kiosk" />
@@ -23,11 +26,59 @@
         <meta property="og:image:width" content="1280," />
         <meta property="og:image:height" content="640" />
         <meta property="twitter:image" content="/kiosk-banner.png" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Immich Kiosk",
+                "alternateName": "Immich Kiosk",
+                "url": "https://immichkiosk.app",
+                "image": "https://immichkiosk.app/kiosk-banner.png",
+                "description": "Immich Kiosk helps you create highly configurable slideshows for displaying Immich assets on browsers and devices.",
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "Web, Linux, Windows, macOS, iOS, Android, Docker",
+                "softwareVersion": "latest",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Immich Kiosk",
+                    "url": "https://immichkiosk.app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Immich Kiosk",
+                    "url": "https://immichkiosk.app"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "category": "Free",
+                    "availability": "https://schema.org/InStock"
+                },
+                "keywords": [
+                    "immich",
+                    "immich kiosk",
+                    "immichkiosk",
+                    "browser slideshow",
+                    "smart photo frame",
+                    "digital display slideshow"
+                ],
+                "license": "https://github.com/damongolding/immich-kiosk?tab=AGPL-3.0-1-ov-file",
+                "sameAs": [
+                    "https://github.com/damongolding/immich-kiosk",
+                    "https://docs.immichkiosk.app"
+                ]
+            }
+        </script>
     </head>
     <body>
         <section class="hero">
             <main>
-                <img src="/assets/img/logo.svg" alt="" />
+                <img
+                    src="/assets/img/logo.svg"
+                    alt="Immich Kiosk pinwheel logo"
+                />
                 <h1>Immich Kiosk</h1>
                 <p>
                     Transform your <strong id="hero-device">Browser</strong
@@ -49,9 +100,13 @@
                     <img
                         class="bg"
                         src="/assets//img/feature-docker.svg"
-                        alt=""
+                        alt="Docker whale logo"
+                        aria-hidden="true"
                     />
-                    <img src="/assets//img/feature-docker.svg" alt="" />
+                    <img
+                        src="/assets//img/feature-docker.svg"
+                        alt="Docker whale logo"
+                    />
 
                     <h2>Simple Installation</h2>
                     <p>Set up easily with Docker</p>
@@ -61,9 +116,13 @@
                     <img
                         class="bg"
                         src="/assets/img/feature-settings.svg"
-                        alt=""
+                        alt="Settings/cog icon"
+                        aria-hidden="true"
                     />
-                    <img src="/assets//img/feature-settings.svg" alt="" />
+                    <img
+                        src="/assets/img/feature-settings.svg"
+                        alt="Settings/cog icon"
+                    />
 
                     <h2>Highly Customisable</h2>
                     <p>Make it yours</p>
@@ -75,9 +134,13 @@
                     <img
                         class="bg"
                         src="/assets/img/feature-responsive.svg"
-                        alt=""
+                        alt="Responsive design icon"
+                        aria-hidden="true"
                     />
-                    <img src="/assets/img/feature-responsive.svg" alt="" />
+                    <img
+                        src="/assets/img/feature-responsive.svg"
+                        alt="Responsive design icon"
+                    />
                     <h2>Responsive design</h2>
                     <p>Beautifully handcrafted</p>
                 </div>
@@ -86,9 +149,13 @@
                     <img
                         class="bg"
                         src="/assets/img/feature-browser.svg"
-                        alt=""
+                        alt="Browser icon"
+                        aria-hidden="true"
                     />
-                    <img src="/assets/img/feature-browser.svg" alt="" />
+                    <img
+                        src="/assets/img/feature-browser.svg"
+                        alt="Browser icon"
+                    />
 
                     <h2>URL queries.</h2>
                     <p>Change settings from the URL.</p>
