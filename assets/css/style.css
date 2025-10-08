@@ -303,6 +303,7 @@ footer::after {
     background-repeat: no-repeat;
     filter: blur(2rem);
     opacity: 0.3;
+    z-index: -1;
 }
 
 footer a {
